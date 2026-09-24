@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="24dp"
+    android:paddingTop="16dp"
+    android:paddingEnd="24dp"
+    android:paddingBottom="16dp">
+
+    <!-- Container central para a logo (Gotas + Nome HemoConecta) -->
+    <LinearLayout
+        android:id="@+id/containerLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/txtParceiros"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <!-- Gotas (Vetor do ícone) -->
+        <ImageView
+            android:id="@+id/imgGotas"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:contentDescription="Gotas HemoConecta"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_hemoconecta_gotas" />
+
+        <!-- Nome "HemoConecta" (Vetor do texto) -->
+        <ImageView
+            android:id="@+id/imgTexto"
+            android:layout_width="210dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="6dp"
+            android:contentDescription="Texto HemoConecta"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_hemoconecta_texto" />
+
+    </LinearLayout>
+
+    <!-- Texto "Conheça os nossos parceiros" (substituindo a frase anterior) -->
+    <TextView
+        android:id="@+id/txtParceiros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/inter24_bold"
+        android:text="Conheça os nossos parceiros"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/containerLogo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
